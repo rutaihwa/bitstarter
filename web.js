@@ -4,7 +4,6 @@ var fs = require('fs');
 var app = express.createServer(express.logger());
 
 var reader;
-var test;
 fs.readFile('index.html', function (err, data)
 {
     if (err)
@@ -13,8 +12,8 @@ fs.readFile('index.html', function (err, data)
 	console.log("Could not read\n");
     }
     //console.log (data);
-    test = data.write('utf-8');
-    reader = test.toString();
+    reader = data.toString();
+    //console.log (reader);
 });
 
 
